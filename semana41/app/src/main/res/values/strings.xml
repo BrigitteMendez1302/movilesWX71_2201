@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">semana41</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
+    <string name="sgte_pregunta">Sgte Pregunta</string>
+</resources>
