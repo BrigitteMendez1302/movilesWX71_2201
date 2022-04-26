@@ -26,5 +26,22 @@ class MainActivity : AppCompatActivity() {
     private fun loadContacts() {
         contacts.add(Contact("Arturo B.", "998656235"))
         contacts.add(Contact("Daniel B.", "559598123"))
+        contacts.add(Contact("Brigitte B.", "559598123"))
+        contacts.add(Contact("Fio B.", "559598123"))
+        contacts.add(Contact("Brigitte B.", "559598123"))
+        contacts.add(Contact("Fio B.", "559598123"))
+        contacts.add(Contact("Brigitte B.", "559598123"))
+        contacts.add(Contact("Fio B.", "559598123"))
+        contacts.add(Contact("Brigitte B.", "837378"))
+        contacts.add(Contact("Fio B.", "559598123"))
+        contacts.add(Contact("Brigitte B.", "3275378"))
+        contacts.add(Contact("Brigitte B.", "559598123"))
+        contacts.add(Contact("Fio B.", "0262626"))
+        contacts.add(Contact("Brigitte B.", "559783783598123"))
+        contacts.add(Contact("Fio B.", "559598123"))
+        contacts.add(Contact("Brigitte B.", "559598123"))
+        contacts.add(Contact("Brigitte B.", "83378378378"))
+
+
     }
 }

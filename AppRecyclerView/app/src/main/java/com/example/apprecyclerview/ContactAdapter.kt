@@ -3,6 +3,7 @@ package com.example.apprecyclerview
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class ContactAdapter(var contacts : ArrayList<Contact>) : RecyclerView.Adapter<ContactPrototype>() {
@@ -24,8 +25,8 @@ class ContactAdapter(var contacts : ArrayList<Contact>) : RecyclerView.Adapter<C
 }
 
 class ContactPrototype(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    val tvName = itemView.tvName
-    val tvTelephone = itemView.tvTelephone
+    val tvName = itemView.findViewById<TextView>(R.id.tvName)
+    val tvTelephone = itemView.findViewById<TextView>(R.id.tvTelephone)
 
     fun bind(contact: Contact) {
         tvName.text = contact.name
