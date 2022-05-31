@@ -1,102 +1,47 @@
 import 'package:flutter/material.dart';
 
-
-
 void main() {
-
-  runApp(MyStatefulApp());
-
+  runApp(MaterialApp(
+    home: FirstRoute(),
+  ));
 }
 
-
-
-class MyStatelessApp extends StatelessWidget {
-
-  int counter = 0;
-
-
-
+class FirstRoute extends StatelessWidget {
   @override
-
   Widget build(BuildContext context) {
-
-    return MaterialApp(
-
-      home: Scaffold(
-
-        appBar: AppBar(
-
-          title: Text("Ejm de StatelessWidget"),
-
-        ),
-
-        body: Center(
-
-          child: Text(counter.toString(),
-          style: TextStyle(fontSize: 40),),
-
-        ),
-
-        floatingActionButton: FloatingActionButton(
-
-          child: Icon(Icons.plus_one),
-
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("First Route..."),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          child: Text("Ir al otro route"),
           onPressed: (){
-
-            counter++;
-
-            print(counter);//para imprimir en consola
-
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => SecondRoute()),
+            );
           },
-
         ),
-
-
-
       ),
 
     );
-
   }
-
 }
 
-class MyStatefulApp extends StatefulWidget {
-  const MyStatefulApp({Key? key}) : super(key: key);
 
-  @override
-  State<MyStatefulApp> createState() => _MyStatefulAppState();
-}
-
-class _MyStatefulAppState extends State<MyStatefulApp> {
-  int counter = 0;
+class SecondRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-
-      home: Scaffold(
-
-        appBar: AppBar(
-
-          title: Text("Ejm de StatelessWidget"),
-
-        ),
-
-        body: Center(
-
-          child: Text(counter.toString(),
-            style: TextStyle(fontSize: 40),),
-
-        ),
-
-        floatingActionButton: FloatingActionButton(
-
-          child: Icon(Icons.plus_one),
-
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Second Route..."),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          child: Text("Regresar"),
           onPressed: (){
-            counter++;
-            print(counter);//para imprimir en consola
-            setState(() {});
+            Navigator.pop(context);
           },
         ),
       ),
